@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 public class seletCutomer {
@@ -33,7 +35,15 @@ public class seletCutomer {
 
         driver.findElement(By.xpath("//a[text()='View Customers']")).click();
 
-        String name= "Sandeep";
+        Date date = new Date();
+
+        SimpleDateFormat sd = new SimpleDateFormat("ddMMss");
+
+        String timeStamp = sd.format(date);
+
+        String name= "Sandeep"+timeStamp;
+
+        driver.findElement(By.xpath("//tr[td[text()='"+name+"']]//input")).click();
 
         driver.findElement(By.xpath("//tr[td[text()='"+name+"']]//input")).click();
 
