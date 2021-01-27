@@ -1,9 +1,22 @@
 package TestNG.Demo;
 
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 public class ClassOne {
 
+
+
+    @BeforeSuite
+    public void beforemysuite()
+    {
+        System.out.println("beforemysuite");
+    }
+
+    @AfterSuite
+    public void aftermysuite()
+    {
+        System.out.println("aftermysuite");
+    }
 
     @Test
     public void ClassOneTest1()

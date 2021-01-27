@@ -1,5 +1,7 @@
 package TestNG.Demo;
 
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class ClassThree {
@@ -21,5 +23,19 @@ public class ClassThree {
     {
         System.out.println("ClassThreeTest3");
     }
+
+
+    @BeforeTest
+    public void beforemytest()
+    {
+        System.out.println("beforemytest");
+    }
+
+    @AfterTest
+    public void aftermytest()
+    {
+        System.out.println("aftermytest");
+    }
+
 
 }
