@@ -26,7 +26,7 @@ public class ClassTwo {
         System.out.println("ClassTwoTest1");
     }
 
-    @Test
+    @Test (groups = "email")
     public void ClassTwoTest2()
     {
         System.out.println("ClassTwoTest2");

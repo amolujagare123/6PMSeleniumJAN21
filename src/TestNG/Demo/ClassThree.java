@@ -12,7 +12,7 @@ public class ClassThree {
         System.out.println("ClassThreeTest1");
     }
 
-    @Test
+    @Test (groups = "email") /*(enabled = false)*/
     public void ClassThreeTest2()
     {
         System.out.println("ClassThreeTest2");

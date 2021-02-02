@@ -1,0 +1,26 @@
+<suite name="All site project">
+<!--
+    <listeners>
+        <listener class-name="org.testng.reporters.EmailableReporter2" />
+    </listeners>-->
+
+
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    </listeners>
+
+    <test name ="module 1">
+        <classes>
+            <class name="TestNG.Real.forumsSite"/>
+            <class name="TestNG.Real.socialSites"/>
+        </classes>
+    </test>
+
+    <test name ="module 2">
+        <classes>
+            <class name="TestNG.Real.TutorialsSites"/>
+        </classes>
+    </test>
+
+</suite>
